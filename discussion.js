@@ -48,4 +48,8 @@ db.users.insertMany([{
 	db.collectionName.find({field: value});
 */
 
-db.getCollection('users').find({})
+db.getCollection('users').find({"lastName": "Doe"})
+
+db.users.find({"lastName": "Doe"});
+
+db.getCollection('users').find({"lastName": "Doe", "age": 25}).pretty();
